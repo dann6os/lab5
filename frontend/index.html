@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Diet-Based Recipe Recommender</h1>
+        <h1>Diet-Based Recipe Recommender for Health and Gains !</h1>
+
         <label for="diet">Choose a Diet:</label>
         <select id="diet">
             <option value="Vegetarian">Vegetarian</option>
@@ -19,9 +20,19 @@
             <option value="Paleo">Paleo</option>
             <option value="Whole30">Whole30</option>
         </select>
+
+        <h2>Dietary Restrictions:</h2>
+        <label><input type="checkbox" name="restriction" value="gluten"> Gluten-Free</label>
+        <label><input type="checkbox" name="restriction" value="dairy"> Dairy-Free</label>
+        <label><input type="checkbox" name="restriction" value="nut"> Nut-Free</label>
+        <label><input type="checkbox" name="restriction" value="soy"> Soy-Free</label>
+        <label><input type="checkbox" name="restriction" value="egg"> Egg-Free</label>      
+          
         <button id="searchBtn">Find Recipes</button>
         <div id="results"></div>
     </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
