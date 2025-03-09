@@ -21,17 +21,19 @@ const DIET_CATEGORIES = [
 
 router.get("/recommend-diet", async (req, res) => {
     const { diet } = req.query;
+    
     if (!diet || !DIET_CATEGORIES.includes(diet)) {
         return res.status(400).json({ error: "Invalid or missing diet category" });
     }
 
     try {
         const url = `https://api.spoonacular.com/recipes/complexSearch?diet=${encodeURIComponent(diet)}&number=5&apiKey=${SPOONACULAR_API_KEY}`;
+        
         console.log("Fetching:", url); 
-
         const response = await fetch(url);
         const data = await response.json();
-        console.log("API Response:", data); 
+        
+        console.log("API Response:", JSON.stringify(data, null, 2));
 
         if (!data.results || data.results.length === 0) {
             return res.status(404).json({ error: "No recipes found for this diet" });
