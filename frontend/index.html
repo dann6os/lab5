@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Discovery</title>
+    <title>Recipe Recommender Lab 5</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Music Discovery App Lab 5</h1>
-        <input type="text" id="artist" placeholder="Enter artist name">
-        <button onclick="getRecommendations()">Find Similar Artists</button>
+        <h1>Recipe Recommender</h1>
+        <input type="text" id="ingredients" placeholder="Enter ingredients (comma separated)">
+        <input type="text" id="diet" placeholder="Enter dietary preference (optional)">
+        <button id="searchBtn">Find Recipes</button>
         <div id="results"></div>
     </div>
     <script src="script.js"></script>
