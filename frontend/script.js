@@ -1,25 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("searchBtn").addEventListener("click", getRecipes);
+    document.getElementById("searchBtn").addEventListener("click", getDietRecommendations);
 });
 
-async function getRecipes() {
-    const ingredients = document.getElementById("ingredients").value;
+async function getDietRecommendations() {
     const diet = document.getElementById("diet").value;
 
-    if (!ingredients) {
-        alert("Please enter at least one ingredient.");
-        return;
-    }
-
     try {
-        const response = await fetch(`/api/recommend?ingredients=${encodeURIComponent(ingredients)}&diet=${encodeURIComponent(diet)}`);
+        const response = await fetch(`/api/recommend-diet?diet=${encodeURIComponent(diet)}`);
         const data = await response.json();
 
         if (data.error) {
             document.getElementById("results").innerHTML = `<p>${data.error}</p>`;
         } else {
             document.getElementById("results").innerHTML = `
-                <h2>Recipe Suggestions</h2>
+                <h2>Recommended ${diet} Recipes</h2>
                 <ul>
                     ${data.recipes.map(recipe => `
                         <li>

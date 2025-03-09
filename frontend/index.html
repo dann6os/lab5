@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Recommender Lab 5</title>
+    <title>Diet Recommender lab5</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Recipe Recommender</h1>
-        <input type="text" id="ingredients" placeholder="Enter ingredients (comma separated)">
-        <input type="text" id="diet" placeholder="Enter dietary preference (optional)">
+        <h1>Diet-Based Recipe Recommender</h1>
+        <label for="diet">Choose a Diet:</label>
+        <select id="diet">
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Ketogenic">Ketogenic</option>
+            <option value="Gluten Free">Gluten Free</option>
+            <option value="Pescetarian">Pescetarian</option>
+            <option value="Paleo">Paleo</option>
+            <option value="Whole30">Whole30</option>
+        </select>
         <button id="searchBtn">Find Recipes</button>
         <div id="results"></div>
     </div>
