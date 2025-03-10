@@ -49,6 +49,6 @@ function resetFilters(){
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("searchBtn").addEventListener("click", getDietRecommendations);
-    document.getElementById("resetBtn").addEventListener("click", resetFilters); // Ensures reset button works
+    document.getElementById("resetBtn").addEventListener("click", resetFilters); 
 });
 

@@ -27,6 +27,13 @@ in the script.js file then adding the API key as a environment variable to the N
 
 ## Sources Used
 
+* Reset button referenced from Lab 3 reset functionality in script.js lines 164-167
+
+document.getElementById('reset-button').addEventListener('click', function(){
+    document.getElementById('search-query').value = '';
+    listItems();
+});
+
 * style.css page was referenced from my Lab 4 style.css page for certain tags like .container , body, header
 and copied padding since stylistically I liked the spacing.
 
