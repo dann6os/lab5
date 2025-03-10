@@ -37,9 +37,18 @@ async function getDietRecommendations() {
 
 //added reset function
 function resetFilters(){
+    document.getElementById("diet").selectedIndex = 0;
+
     document.querySelectorAll('input[name="restriction"]').forEach(checkbox => {
         checkbox.checked = false;
     });
 
     document.getElementById("results").innerHTML = "";
+    console.log("reset button clicked");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("searchBtn").addEventListener("click", getDietRecommendations);
+    document.getElementById("resetBtn").addEventListener("click", resetFilters); // Ensures reset button works
+});
+
