@@ -24,7 +24,6 @@ async function getDietRecommendations() {
                     ${data.recipes.map(recipe => `
                         <li>
                             <h3>${recipe.title}</h3>
-                            <p>Scrumptious ${diet} recipe</p>
                             <img src="${recipe.image}" alt="${recipe.title} - a ${diet} friendly dish">
                         </li>
                     `).join("")}

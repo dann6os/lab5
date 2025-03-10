@@ -36,7 +36,7 @@ select, input[type="checkbox"] {
     margin-bottom: 10px;
     border: 2px solid #15405a;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     background-color: #fdf8e3;
     color: #15405a;
 }
@@ -99,8 +99,8 @@ li {
 
 li img {
     border-radius: 8px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     margin-top: 10px;
 }
