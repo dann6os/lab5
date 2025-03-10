@@ -34,3 +34,12 @@ async function getDietRecommendations() {
         document.getElementById("results").innerHTML = `<p>Error fetching data</p>`;
     }
 }
+
+//added reset function
+function resetFilters(){
+    document.querySelectorAll('input[name="restriction"]').forEach(checkbox => {
+        checkbox.checked = false;
+    });
+
+    document.getElementById("results").innerHTML = "";
+}
